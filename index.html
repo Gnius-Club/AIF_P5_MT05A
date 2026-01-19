@@ -3,20 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Playbook-P5-TM05A</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Playbook-P5-TM09</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <header>
-        <h1><span class="book-icon">📋</span> <strong>Playbook Sesión 5A 5to Primaria</strong></h1>
+        <h1><span class="book-icon">📋</span> <strong>Playbook: Misión 9 - 5to Primaria</strong></h1>
         <div class="header-widgets">
             <div class="timer-container">
-                <span id="timer">⏱️ 00:00</span>
-                <button id="startStop">Start</button>
-                <button id="reset">Reset</button>
+                <span id="global-timer">⏱️ 40:00</span>
+                <button id="global-start-stop">Start</button>
+                <button id="global-reset">Reset</button>
             </div>
             <div class="theme-toggle">
                 <i class="fas fa-sun"></i>
@@ -28,7 +27,6 @@
             </div>
         </div>
     </header>
-
     <div class="main-container">
         <aside class="activity-list">
             <h2>Actividades</h2>
@@ -40,306 +38,408 @@
                 <li><a href="#activity-4">4</a></li>
                 <li><a href="#activity-5">5</a></li>
             </ul>
-
-            <div class="sidebar-info">
-                <p>💡 Cada actividad está cuidadosamente diseñada para involucrar a los estudiantes.</p>
-                <p>⏱️ Se proporcionan estimaciones de tiempo para cada actividad para ayudarle a mantener el rumbo.</p>
-            </div>
         </aside>
-
         <main class="content">
             <div class="progress-bar">
                 <div class="progress"></div>
             </div>
-
-            <button id="toggle-dialogues">Mostrar todos los diálogos</button>
-
-            <!-- SECCIÓN "DE UN VISTAZO" (ANTES ACTIVITY-0) -->
+            <!-- ACTIVIDAD 0: DE UN VISTAZO -->
             <div class="activity-card" id="activity-0">
-                <h2><span class="book-icon">📝</span> De un Vistazo: Sesión Gnius</h2>
-                <p class="overview-subtitle">Resumen rápido de objetivos, materiales y preparación para el facilitador.</p>
-                <div class="overview-table-container">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th style="width: 50%;">Objetivos, Tácticas y Entregable</th>
-                                <th style="width: 50%;">Materiales Específicos y Preparación Previa</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <strong>Objetivos:</strong>
-                                    <ul>
-                                        <li>Que los estudiantes comprendan que la IA puede proporcionar datos detallados como la posición (coordenadas X,Y) y el nivel de confianza de un objeto detectado.</li>
-                                        <li>Que aprendan a entrenar un segundo objeto (ID2) y diseñen un proyecto complejo donde el robot use estos datos para centrar un objeto, actuar solo con alta confianza y reaccionar de forma diferente a un segundo objeto, obteniendo el plan de Xolo.</li>
-                                    </ul>
-                                    <strong>Secuencia de Clase:</strong>
-                                    <ul>
-                                        <li><strong class="tactic-highlight">⚡ Saludo Interactivo con IA:</strong> Activación y personalización de la IA.</li>
-                                        <li><strong class="tactic-highlight">⚡ "I Can Statement" + Ejemplificación:</strong> Introducir conceptos de coordenadas y confianza, y clarificar objetivos.</li>
-                                        <li><strong class="tactic-highlight">⚡ AI GYM:</strong> Aprender sobre clasificación múltiple, comandos de posición y confianza.</li>
-                                        <li><strong class="tactic-highlight">⚡ Brain Spark:</strong> Elección del segundo objeto y diseño de misiones complejas individuales.</li>
-                                        <li><strong class="tactic-highlight">⚡ Gnius STORM:</strong> Compartición de objetos y planes de misión.</li>
-                                    </ul>
-                                    <strong>Entregable Clave:</strong>
-                                    <ul>
-                                        <li>Un conjunto de 4 planes (GCS) individuales por equipo, cada uno para una misión de percepción experta (reconocimiento de ID1 e ID2 con posición y confianza), listos para ser implementados y probados en la Sesión 5B.</li>
-                                        <li>Los objetos físicos "ID1" (de la sesión anterior) y "ID2" (elegido en esta sesión) por equipo.</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <strong>Materiales Específicos:</strong>
-                                    <ul>
-                                        <li>Proyector o pantalla interactiva.</li>
-                                        <li>Conexión a internet estable.</li>
-                                        <li>Acceso a MakeCode (<a href="https://makecode.microbit.org/" target="_blank">https://makecode.microbit.org/</a>).</li>
-                                        <li>Chat "Agente Gnius" (Xolo) activo y funcionando.</li>
-                                        <li>Presentación de diapositivas (Diapositivas 1-11).</li>
-                                        <li>1 Nezha Pro Sports Kit (con A.I. Lens) por equipo de 4 estudiantes.</li>
-                                        <li>Los objetos "ID1" que cada equipo eligió en la Sesión 4A.</li>
-                                        <li>Objetos variados (diferentes de los ID1) para que los equipos elijan su "ID2".</li>
-                                        <li>Pizarrón o superficie para dibujar un rectángulo y un imán/dibujo para ilustrar X,Y.</li>
-                                    </ul>
-                                    <strong>Preparación Previa para ESTA Sesión:</strong>
-                                    <ol>
-                                        <li><strong>Revisión de Misión (Interna):</strong>
-                                            <ul>
-                                                <li>Verificar conexión a internet y funcionamiento de MakeCode.</li>
-                                                <li>Tener los kits (con A.I. Lens) y los objetos ID1 de los equipos listos.</li>
-                                                <li>Tener la presentación de diapositivas (1-11) lista y en orden.</li>
-                                            </ul>
-                                        </li>
-                                        <li><strong>Familiarización:</strong> Revisar el flujo de la sesión, diálogos y tiempos.</li>
-                                        <li><strong>Preparación Física:</strong> Prepara tu demostración de las coordenadas X, Y en el pizarrón y el concepto de confianza con ejemplos de porcentajes.</li>
-                                    </ol>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <h2><span class="book-icon">📝</span> De un Vistazo: Comando Central</h2>
+                <p class="overview-subtitle">Todo lo que necesitas para preparar y ejecutar esta misión en minutos.</p>
+                
+                <div class="command-section">
+                    <h3>🎯 Objetivo de Aprendizaje</h3>
+                    <div class="objective-box">
+                        <p><strong>Los estudiantes podrán:</strong> Usar la Smart A.I. Lens y MakeCode para leer colores y programar acciones basadas en condicionales y comprender la diferencia entre percepción y comprensión en una IA pre-entrenada.</p>
+                    </div>
+                </div>
+                <div class="command-section xolo-prompt">
+                    <h3>🤖 Prompt de Referencia para XOLO (Solo para Maestro)</h3>
+                    <div class="prompt-box">
+                        <div class="prompt-header">
+                            <span class="prompt-label">⚠️ NOTA: XOLO ya conoce el tema de esta misión. Este prompt es SOLO de referencia en caso de emergencia técnica:</span>
+                            <button class="copy-btn" onclick="copyPrompt('main-prompt')">
+                                <i class="fas fa-copy"></i> Copiar
+                            </button>
+                        </div>
+                        <pre id="main-prompt">Explícamme cómo una IA puede ‘ver’ colores aunque no entienda el mundo (percepción vs comprensión). Enséñame por qué el recognition puede fallar con mala iluminación o ángulos raros y cómo probar su fiabilidad. Luego muéstrame cómo activar la Smart A.I. Lens en modo color y cómo se usa el dato que devuelve para tomar decisiones. Explícame dónde aparece el IF en el código y qué significa ‘si ve rojo, entonces…’. Finalmente ayúdame a diseñar una reacción del robot para 2 colores distintos.</pre>
+                    </div>
+                </div>
+                <div class="command-section">
+                    <h3>⚡ Puntos Esenciales de la Misión</h3>
+                    <div class="essentials-grid">
+                        <div class="essential-card">
+                            <div class="essential-icon">🎓</div>
+                            <h4>Concepto Clave</h4>
+                            <p>Percepción vs Comprensión: La IA puede reconocer un color (percibir) como nosotros vemos una luz, pero no entiende qué significa ese color a menos que nosotros le demos una instrucción (comprender).</p>
+                        </div>
+                        <div class="essential-card">
+                            <div class="essential-icon">🔧</div>
+                            <h4>Habilidad Técnica</h4>
+                            <p>Usar la cámara inteligente para detectar colores y hacer que el robot reaccione.</p>
+                        </div>
+                        <div class="essential-card">
+                            <div class="essential-icon">🧪</div>
+                            <h4>Experimentación</h4>
+                            <p>Probar con diferentes niveles de luz y ángulos de la cámara para entender limitaciones.</p>
+                        </div>
+                        <div class="essential-card">
+                            <div class="essential-icon">💬</div>
+                            <h4>Interacción con XOLO</h4>
+                            <p>XOLO ya conoce a cada estudiante y el tema de hoy. Solo abren el chat y comienzan a aprender. Tú guías el timing y motivación.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="command-section">
+                    <h3>📦 Checklist de Materiales</h3>
+                    <div class="materials-checklist">
+                        <label><input type="checkbox"> Proyector/pantalla + presentación (5 diapositivas)</label>
+                        <label><input type="checkbox"> Internet estable + Gnius Space con XOLO activo</label>
+                        <label><input type="checkbox"> Micro:bit + Kit Nezha Pro + Smart A.I. Lens (1 por cada 4 estudiantes)</label>
+                        <label><input type="checkbox"> Acceso a MakeCode (https://makecode.microbit.org/) con extensión PlanetX instalada</label>
+                        <label><input type="checkbox"> Objetos de colores brillantes (Rojo, Verde, Azul)</label>
+                        <label><input type="checkbox"> ⚠️ Esta misión usa programación con BLOQUES en MakeCode</label>
+                        <label><input type="checkbox"> 📋 Para agregar extensión: En MakeCode → Extensiones → Buscar 'PlanetX' → Agregar</label>
+                    </div>
+                    <p class="care-reminder"><strong>🛡️ Cuidado del equipo:</strong> No tocar el lente de la cámara, mantenerlo limpio y conectar los cables con delicadeza al Kit Nezha.</p>
+                </div>
+                <div class="command-section">
+                    <h3>🗓️ Secuencia de la Misión (40 min)</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot">1</div>
+                            <div class="timeline-content">
+                                <strong>Intro a la Misión</strong>
+                                <span class="time-badge">2 min</span>
+                                <p>Bienvenida, I Can Statement y contexto de la misión.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">2</div>
+                            <div class="timeline-dot">2</div>
+                            <div class="timeline-content">
+                                <strong>A.I. Gym</strong>
+                                <span class="time-badge">8 min</span>
+                                <p>Los estudiantes abren el chat con XOLO y aprenden sobre cómo la IA percibe colores (sin prompt específico).</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">3</div>
+                            <div class="timeline-content">
+                                <strong>Brain Spark</strong>
+                                <span class="time-badge">20 min</span>
+                                <p>Idear, construir y experimentar un programa con XOLO.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">4</div>
+                            <div class="timeline-content">
+                                <strong>Gnius STORM - Compartir</strong>
+                                <span class="time-badge">5 min</span>
+                                <p>Demostración y reflexión en parejas.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">5</div>
+                            <div class="timeline-content">
+                                <strong>Entrega de Evidencias</strong>
+                                <span class="time-badge">5 min</span>
+                                <p>Subir capturas a Gnius Space y finalizar misión.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="command-section">
+                    <h3>🚨 Resolución Rápida de Problemas</h3>
+                    <div class="troubleshooting-list">
+                        <ul>
+                            <li><strong>Si los alumnos no pueden ingresar a Gnius Space:</strong> Activa XOLO SOS en <a href="https://xolo.gnius.club" target="_blank">xolo.gnius.club</a> para continuar la misión sin interrumpir la clase.</li>
+                            <li><strong>Si la cámara no reconoce los colores:</strong> Revisar la iluminación del salón (evitar luz directa o muy tenue). Pedir a los alumnos acercar o alejar el objeto para mejorar la lectura.</li>
+<li><strong>Si la cámara no conecta:</strong> Verificar que el cable esté bien conectado al puerto IIC del Kit Nezha. Revisar que la extensión PlanetX esté instalada en MakeCode.</li>
+<li><strong>Si el micro:bit no responde:</strong> Verificar que la batería del Kit Nezha esté cargada y encendida.</li>
+<li><strong>Si hay errores en el código:</strong> Recordar a los estudiantes que XOLO puede ayudar a depurar. Pídeles que copien el error y se lo muestren a XOLO.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <!-- FIN DE LA SECCIÓN "DE UN VISTAZO" -->
-
+            <!-- ACTIVIDAD 1: INTRO A LA MISIÓN -->
             <div class="activity-card" id="activity-1">
-                <h2>⚡ Actividad 1: Saludo de I.A. con todos ⏰ 3 minutos</h2>
-                <p>Crear un ambiente acogedor y activar a la IA para la sesión.</p>
-                <div class="steps">
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 1: Bienvenida e Instrucción ⏰ 1 minuto</h3>
-                            <p>(Proyectar Diapositiva 2) Da la bienvenida a los alumnos y guíalos para que activen a Xolo.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">¡Hola, mis increíbles entrenadores de IA! Vamos a activar a nuestro copiloto, Xolo. Por favor, salúdenlo en el chat y díganle su nombre y cuáles son sus gustos e intereses para empezar la misión de hoy.</p>
-                            </div>
-                        </div>
+                <div class="activity-header">
+                    <h2>🚀 Actividad 1: Intro a la Misión</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 2:00</span>
+                        <button class="timer-start-btn" data-duration="120">Iniciar</button>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 2: Verificación de Interacción ⏰ 2 minutos</h3>
-                            <p>Monitorea la interacción de los alumnos con la IA, asegurándote de que todos reciban el saludo de bienvenida.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">¡Fantástico! Veo que Xolo les está contestando y está listo para la acción. Si alguien no ha recibido respuesta, levante la mano para ayudarle.</p>
-                            </div>
-                        </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Dar la bienvenida con energía.</li>
+                            <li>Pedir a los alumnos que ingresen a Gnius Space.</li>
+                            <li>Proyecta diapositiva 1 con el I Can Statement.</li>
+                            <li>Motiva: "¡Hoy le daremos ojos inteligentes a sus robots para que reconozcan el mundo!".</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <ul>
+                            <li>XOLO ya está listo y conoce a cada estudiante.</li>
+                            <li>Sabe que hoy toca aprender sobre Reconocimiento de colores con IA.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Escucha la misión del día.</li>
+                            <li>Loguearse en Gnius Space.</li>
+                            <li>Preparación para trabajar en parejas.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 1: I Can Statement</h4>
+                    <div class="slide-content">
+                        <p><strong>🎯 Hoy seré capaz de:</strong></p>
+                        <p class="highlight-text">🤖 A usar la Smart A.I. Lens para que el robot tome decisiones según los colores que ve.</p>
+                        <p><strong>Aplicación real:</strong> Los semáforos inteligentes en las ciudades modernas usan esta tecnología para detectar el tráfico y cambiar de color automáticamente.</p>
+                        <p><strong>Tu aliado:</strong> XOLO ya sabe qué vas a aprender hoy. ¡Solo abre el chat y comienza!</p>
                     </div>
                 </div>
             </div>
-
+            <!-- ACTIVIDAD 2: A.I. GYM -->
             <div class="activity-card" id="activity-2">
-                <h2>⚡ Actividad 2: I Can Statement + Ejemplificación ⏰ 7 minutos</h2>
-                <p>Introducir los conceptos de posición (X, Y) y confianza en la IA, y presentar el objetivo de la clase.</p>
-                <div class="steps">
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 1: Contextualización - Percepción Detallada (X,Y) ⏰ 3 minutos</h3>
-                            <p>(Proyectar Diapositiva 4) Anuncia la actividad y explica el concepto de coordenadas X, Y.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <p class="dialogue assistant">Muy bien, iniciamos la actividad <strong>'I Can Statement + Ejemplificación'</strong>. Hasta ahora, la IA nos decía 'lo veo' o 'no lo veo'. Pero los robots expertos necesitan más información. Imaginen que esta es la 'vista' de la cámara (dibuja un rectángulo en el pizarrón). Cuando ve un objeto, no solo dice 'lo veo', ¡nos da sus coordenadas! La coordenada 'X' nos dice si está a la izquierda o a la derecha, y la 'Y' nos dice si está arriba o abajo. (Mueve un imán o dibujo en el pizarrón para ilustrar y que los alumnos entiendan la X e Y).</p>
-                        </div>
+                <div class="activity-header">
+                    <h2>🧠 Actividad 2: A.I. Gym</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 8:00</span>
+                        <button class="timer-start-btn" data-duration="480">Iniciar</button>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 2: Concepto de Confianza ⏰ 2 minutos</h3>
-                            <p>Explica cómo la IA puede expresar qué tan segura está de una detección.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <p class="dialogue assistant">Además de dónde está, la IA nos dice qué tan segura está de que es el objeto correcto. Es como cuando ustedes ven a un amigo de lejos y dicen 'creo que es él... estoy 60% seguro'. Cuando se acerca, dicen '¡Ah, sí! ¡Estoy 99% seguro!'. La IA hace lo mismo, nos da un porcentaje de confianza. ¡Así sabemos qué tan fiable es su 'vista'!</p>
-                        </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Proyecta diapositiva 2.</li>
+                            <li>Indica: "Abran el chat con XOLO y salúdenlo. Él ya sabe qué les va a enseñar hoy."</li>
+                            <li>Circula para asegurar que todos interactúan con XOLO.</li>
+                            <li>Si alguien tiene dudas, recuérdale: "Pregúntale a XOLO, él te puede explicar de otra forma".</li>
+                        </ul>
                     </div>
-                     <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 3: "I Can Statement" ⏰ 2 minutos</h3>
-                            <p>(Proyectar Diapositiva 3) Presenta el objetivo concreto de la sesión.</p>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">✅ XOLO ACTIVO</p>
+                        <ul>
+                            <li>Reconoce al estudiante y sus preferencias de aprendizaje.</li>
+                            <li>Explica cómo la Smart A.I. Lens detecta colores usando sensores de luz.</li>
+                            <li>Introduce el concepto de fiabilidad y por qué la luz afecta lo que la IA ve.</li>
+                            <li>Responde dudas sobre los conceptos.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Abrir el chat con XOLO y saludarlo.</li>
+                            <li>Aprender a usar la Smart A.I. Lens para detectar colores.</li>
+                            <li>Aprender sobre la diferencia entre ver (percibir) y entender (comprender).</li>
+                            <li>Despejar todas sus dudas preguntando a XOLO.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 2: A.I. GYM</h4>
+                    <div class="slide-content">
+                        <p><strong>💬 Abre el chat con XOLO y salúdalo:</strong></p>
+                        <div class="prompt-box">
+                            <pre>"¡Hola XOLO! Estoy listo para aprender."</pre>
                         </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <p class="dialogue assistant">Hoy vamos a diseñar un robot mucho más inteligente. Al final de la sesión, podrán decir: <strong>'Yo puedo explicar qué son las coordenadas X, Y y la confianza de la IA, y tengo un plan para que mi robot centre un objeto, ignore las detecciones dudosas y reaccione diferente a dos objetos distintos.'</strong></p>
-                        </div>
+                        <p class="highlight-text" style="margin-top: 1rem;">✨ XOLO ya sabe quién eres y qué tema toca hoy. ¡Solo empieza a conversar!</p>
+                        <p class="highlight-text">🎯 Objetivo: Aprender a usar la Smart A.I. Lens para detectar colores y entender la fiabilidad de la IA.</p>
+                    </div>
+                </div>
+                
+                <div class="optional-script">
+                    <button class="collapsible-button">📖 Ver guion detallado (opcional)</button>
+                    <div class="collapsible-content">
+                        <p class="dialogue assistant">¡Hola a todos! Ahora vamos a aprender algo asombroso. Abran su chat con XOLO y simplemente digan "Hola". XOLO ya los conoce y sabe exactamente qué les va a enseñar hoy. No necesitan escribir un prompt especial, solo empiecen a platicar con él. Van a descubrir cómo su robot puede "ver" colores usando la Smart A.I. Lens. Pongan mucha atención a cómo la luz puede engañar a la IA. ¡Pregúntenle todo lo que quieran a XOLO, él es su guía experto!</p>
                     </div>
                 </div>
             </div>
-
+            <!-- ACTIVIDAD 3: BRAIN SPARK -->
             <div class="activity-card" id="activity-3">
-                <h2>⚡ Actividad 3: AI GYM ⏰ 15 minutos</h2>
-                <p>Guiar a los alumnos para que aprendan sobre el entrenamiento de múltiples objetos y los comandos de posición y confianza.</p>
-                <div class="steps">
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 1: Exploración con Xolo - Más Allá de una Cosa (ID2) ⏰ 5 minutos</h3>
-                            <p>(Proyectar Diapositiva 5) Anuncia la actividad y guía a los alumnos para que pidan la explicación a Xolo.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <p class="dialogue assistant">¡Perfecto, ahora vamos al <strong>A.I. GYM</strong> para que nuestra IA sea aún más inteligente! Pidanle a Xolo la siguiente información, escribiendo en el chat: <strong>'Mi perfil es [escribe tu perfil] y quiero que me enseñes cómo la A.I. Lens puede distinguir entre varios objetos (ID1 e ID2) y darnos datos detallados como su posición (X) y qué tan segura está (confianza).'</strong> Xolo les explicará que la IA puede aprender un segundo objeto, ID2, y darnos información sobre dónde lo ve.</p>
-                        </div>
+                <div class="activity-header">
+                    <h2>💡 Actividad 3: Brain Spark</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 20:00</span>
+                        <button class="timer-start-btn" data-duration="1200">Iniciar</button>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 2: Los Comandos del Plan para Posición y Confianza ⏰ 10 minutos</h3>
-                            <p>(Proyectar Diapositiva 6 y 7) Indica a los alumnos que presten atención a los comandos que Xolo les mostrará para crear su plan complejo.</p>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Proyecta la diapositiva 3.</li>
+                            <li>Indica: "Pidan a XOLO que los ayude a idear un proyecto. Cuando tengan su GCS, pásenlo a bloques en MakeCode, prueben en el simulador y luego con el hardware real".</li>
+                            <li>Entrega por parejas los Smart A.I. Lenses y Kits Nezha conforme los alumnos prueben su GCS en el simulador.</li>
+                            <li>Si hay errores, recuerda: "Pregúntenle a XOLO, él los ayuda a depurar".</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">✅ XOLO ACTIVO</p>
+                        <ul>
+                            <li>Ayuda a desarrollar una idea y un VIBE que aplique el reconocimiento de colores para un semáforo inteligente.</li>
+                            <li>Entrega el GCS de la idea del genio.</li>
+                            <li>Resuelve errores de sintaxis o lógica.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Trabajar con XOLO una idea y un VIBE para usar la detección de colores en un proyecto útil.</li>
+                            <li>Traducir el GCS de XOLO a bloques en MakeCode.</li>
+                            <li>Depurar su programa con XOLO si hay errores.</li>
+                            <li>Conectar la Smart A.I. Lens al puerto IIC del Kit Nezha y probar.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 3: Brain Spark</h4>
+                    <div class="slide-content">
+                        <p><strong>1. 💬 Pide a XOLO que te ayude a crear:</strong></p>
+                        <div class="prompt-box">
+                            <pre>"Xolo, ayúdame a idear un proyecto aplicado donde mi robot tome decisiones según colores usando Python. Mi vibe: ‘robot semáforo inteligente que cambia de acción según color detectado’. Ayúdame a definir reglas claras (2–3 colores), cómo se mueve o acciona un servo en cada caso, y cómo probar fiabilidad. Luego conviértelo en un GCS + código Python para ejecutarlo, de acuerdo a tu entrenamiento con el robot XGO y Micro:bit."</pre>
                         </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <p class="dialogue assistant">¡Excelente! Ahora que saben que la IA puede ver más de una cosa y darnos detalles, necesitan los comandos exactos para usar esa información. Xolo les va a mostrar los comandos clave para su plan. Presten mucha atención.</p>
-                            <pre class="dialogue assistant" style="color: #d32f2f;">// Para saber la posición horizontal (X) del objeto ID1
-fijar variable "posicion_x" a In the image get learn object ID1 info: X
-
-// Para saber qué tan segura está la IA del objeto ID1 (confianza)
-fijar variable "confianza_ID1" a In the image get learn object ID1 info: Confidence
-
-// Para tomar decisiones complejas
-SI (Image contains learned objects: ID1) Y (variable "confianza_ID1" > 80):
-    // Si ve ID1 con mucha confianza, ajusta el robot con la posición X
-    SI (variable "posicion_x" < 140): // Objeto a la izquierda
-        // Girar a la izquierda
-    SINO SI (variable "posicion_x" > 180): // Objeto a la derecha
-        // Girar a la derecha
-    SINO:
-        // ¡Centrado!
-    FIN SI
-SINO SI (Image contains learned objects: ID2):
-    // Si ve ID2, haz otra cosa diferente
-SINO:
-    // Si no ve nada, sigue buscando
-FIN SI</pre>
-                            <p class="dialogue assistant">¡Con estos comandos, están programando un cerebro robótico mucho más avanzado!</p>
-                        </div>
+                        <p style="margin-top: 1.5rem;"><strong>2. 🔬 Experimenta y descubre con tu programa:</strong></p>
+                        <ul>
+                            <li>¿El robot realiza la acción correcta cada vez que ve el color?</li>
+                            <li>¿Qué pasa si inclinas la Smart A.I. Lens un poco hacia un lado?</li>
+                            <li>¿Funciona igual el reconocimiento con la luz del salón encendida vs. apagada?</li>
+                            <li>Si la IA detecta el color pero no sabe qué hacer con él, ¿está comprendiendo o solo percibiendo?</li>
+                            <li>¿Por qué es importante probar la fiabilidad del sensor antes de usar el robot en una situación real?</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="optional-script">
+                    <button class="collapsible-button">📖 Ver guion detallado (opcional)</button>
+                    <div class="collapsible-content">
+                        <p class="dialogue assistant">¡Es hora de crear, genios! Vamos a usar lo que aprendimos para construir un semáforo inteligente. Pídanle a XOLO que los ayude a idear cómo su robot puede cambiar de acción según el color que detecte. Primero definan su idea y el "VIBE" con XOLO, luego él les dará el GCS. Pasen ese plan a bloques en MakeCode y prueben primero en el simulador. Por ejemplo, podrían hacer que un servo se mueva como una barrera cuando vea el color rojo. Si algo no sale a la primera, no se preocupen, pregúntenle a XOLO, él los ayudará a depurar su código. Las preguntas de experimentación los ayudarán a ver si su IA es confiable. ¡A experimentar!</p>
+                    </div>
+                </div>
+                <div class="challenge-prompt">
+                    <h4>🚀 Prompt de Desafío (para quienes terminen rápido)</h4>
+                    <div class="prompt-box">
+                        <p><strong>Si ya experimentaste con todo, pregunta a XOLO:</strong></p>
+                        <p class="challenge-text">"Ya probé con el semáforo básico. ¿Puedes enseñarme cómo hacer que mi robot use un tercer color para una acción de emergencia?"</p>
                     </div>
                 </div>
             </div>
-
+            <!-- ACTIVIDAD 4: GNIUS STORM - COMPARTIR -->
             <div class="activity-card" id="activity-4">
-                 <h2>⚡ Actividad 4: Brain Spark ⏰ 10 minutos</h2>
-                <p>Proceso de elección del segundo objeto (ID2) y diseño de misiones complejas individuales.</p>
-                <div class="steps">
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 1: Elección del Objeto ID2 (Equipo de 4) ⏰ 2 minutos</h3>
-                            <p>(Proyectar Diapositiva 8) Anuncia la actividad y guía a los equipos para que elijan su segundo objeto.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <p class="dialogue assistant">¡Llegamos al <strong>Brain Spark</strong>! Reúnanse en sus equipos de 4 integrantes. Conserven su objeto 'ID1' de la clase pasada. Su primera misión es elegir un <strong>segundo objeto, claramente diferente,</strong> que será su 'ID2'. ¡Piensen en dos cosas distintas que su robot pueda ver!</p>
-                        </div>
+                <div class="activity-header">
+                    <h2>⚡ Actividad 4: Gnius STORM - Compartir y Reflexionar</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 5:00</span>
+                        <button class="timer-start-btn" data-duration="300">Iniciar</button>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 2: Diseño de la Misión Compleja Individual (Cada Integrante) ⏰ 8 minutos</h3>
-                            <p>(Proyectar Diapositiva 9) Guía a cada estudiante para que diseñe su misión compleja individual y obtenga el plan de Xolo.</p>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Organiza las parejas para compartir.</li>
+                            <li>Gestiona los tiempos: 2 min demo + 2 min reflexión + 1 min cierre.</li>
+                            <li>Facilita retroalimentación constructiva.</li>
+                            <li>Cierra con reflexión sobre aplicaciones reales.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">⏸️ XOLO EN ESPERA</p>
+                        <ul>
+                            <li>Disponible solo si hay dudas finales urgentes.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Demuestra su programa funcionando a otra pareja.</li>
+                            <li>Explica qué colores detecta bien su robot y cuáles le costaron trabajo.</li>
+                            <li>Comparte un descubrimiento interesante.</li>
+                            <li>Da retroalimentación positiva al compañero.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 4: Think-Pair-Share</h4>
+                    <div class="slide-content tps-structure">
+                        <div class="tps-phase">
+                            <h4>🤔 THINK (30 seg)</h4>
+                            <p>Reflexión individual: ¿Qué colores detectó mejor tu Smart A.I. Lens? ¿Qué te sorprendió de la luz?</p>
                         </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <p class="dialogue assistant">Ahora, cada uno de ustedes, de forma INDIVIDUAL, va a diseñar una misión de dos objetivos. Su robot debe tener un comportamiento para su objeto principal (ID1), usando la posición X y la confianza para ser preciso. Y un comportamiento TOTALMENTE diferente para el objeto secundario (ID2). Describan su misión compleja a Xolo para que les ayude a diseñar la lógica y genere su plan. ¡Así cada equipo tendrá 4 planes diferentes y muy inteligentes!</p>
-                            <pre class="dialogue assistant" style="color: #d32f2f;">// PLAN de ejemplo para un "Guardián de Tesoros"
-AL INICIO:
-    Initialize AI-Lens
-    Switch function as Object Learning
-    mostrar texto "Guardián Activado"
-
-POR SIEMPRE:
-    SI (Image contains learned objects: ID1):
-        fijar variable "confianza_ID1" a In the image get learn object ID1 info: Confidence
-        SI (variable "confianza_ID1" > 80):
-            fijar variable "posicion_x" a In the image get learn object ID1 info: X
-            SI (variable "posicion_x" < 140): // Objeto a la izquierda
-                nezha_motor_M1_velocidad(-25)
-                nezha_motor_M2_velocidad(25)
-            SINO SI (variable "posicion_x" > 180): // Objeto a la derecha
-                nezha_motor_M1_velocidad(25)
-                nezha_motor_M2_velocidad(-25)
-            SINO: // Centrado
-                nezha_motor_M1_velocidad(0)
-                nezha_motor_M2_velocidad(0)
-            FIN SI
-        FIN SI
-    SINO SI (Image contains learned objects: ID2):
-        // ¡Ladrón detectado! Retroceder y girar rápidamente
-        nezha_motor_M1_velocidad(-60)
-        nezha_motor_M2_velocidad(-60)
-        ESPERAR(1000)
-        nezha_motor_M1_velocidad(50)
-        nezha_motor_M2_velocidad(-50)
-        ESPERAR(1500)
-    SINO:
-        // No veo nada, seguir buscando (girar lentamente).
-        nezha_motor_M1_velocidad(30)
-        nezha_motor_M2_velocidad(-30)
-    FIN SI</pre>
-                            <p class="dialogue assistant">¡Guarden muy bien sus planes individuales y sus objetos 'ID1' y 'ID2'! En la próxima clase, los usarán para entrenar a la IA con ambos objetos y darle vida a su robot experto.</p>
+                        <div class="tps-phase">
+                            <h4>👥 PAIR (2 min)</h4>
+                            <p>Con otra pareja: Demuestren su programa y expliquen su experiencia</p>
+                            <p class="highlight-text">Frase guía: "Mi robot detectó mejor el color rojo. Me sorprendió que si hay mucha sombra, confunde el azul con el negro."</p>
+                        </div>
+                        <div class="tps-phase">
+                            <h4>💬 SHARE (2 min)</h4>
+                            <p>Retroalimentación mutua y cierre del maestro.</p>
                         </div>
                     </div>
                 </div>
             </div>
-
+            <!-- ACTIVIDAD 5: ENTREGA DE EVIDENCIAS -->
             <div class="activity-card" id="activity-5">
-                <h2>⚡ Actividad 5: Gnius STORM ⏰ 5 minutos</h2>
-                <p>Compartir los objetos ID1 e ID2, y los planes de misión complejos.</p>
-                <div class="steps">
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 1: Gnius STORM (Think - Individual) ⏰ 1 minuto</h3>
-                            <p>(Proyectar Diapositiva 10) Anuncia la actividad final e instruye una reflexión individual.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <p class="dialogue assistant">¡Llegamos a la última actividad, el <strong>Gnius STORM</strong>! Antes de compartir, piensen un momento: ¿Cuál creen que será el mayor desafío al hacer que su robot distinga entre los dos objetos, ID1 e ID2?</p>
-                        </div>
+                <div class="activity-header">
+                    <h2>✅ Actividad 5: Entrega de Evidencias</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 5:00</span>
+                        <button class="timer-start-btn" data-duration="300">Iniciar</button>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 2: Gnius STORM (Share - Grupo) ⏰ 3 minutos</h3>
-                            <p>(Proyectar Diapositiva 11) Indica a los equipos que muestren sus objetos y describan su misión compleja.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <p class="dialogue assistant">¡Ahora, a compartir! Un portavoz de cada equipo nos mostrará sus objetos 'ID1' y 'ID2'. Luego, nos explicará la misión de su robot: ¿Qué hará cuando vea ID1 con alta confianza? ¿Y qué hará si ve a ID2? ¡Escuchemos esas ideas de percepción experta!</p>
-                        </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Proyecta diapositiva 5 con las instrucciones.</li>
+                            <li>Guía a los estudiantes para tomar las capturas.</li>
+                            <li>Asegura que todos suban sus evidencias a Gnius Space.</li>
+                            <li>Felicita al grupo por completar la misión.</li>
+                        </ul>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 3: Gnius STORM (Reflexión Final y Cierre) ⏰ 1 minuto</h3>
-                            <p>Cierra la sesión y conecta con la siguiente unidad.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <p class="dialogue assistant">¡Planes increíblemente inteligentes! Han diseñado una lógica que usan los robots reales para apuntar, seguir y clasificar objetos. Han pasado de una simple reacción a una percepción detallada. En la próxima sesión, entrenarán a su IA con dos objetos y programarán este cerebro complejo. ¡Será todo un desafío!</p>
-                        </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">⭕ XOLO FINALIZADO</p>
+                        <ul>
+                            <li>La interacción con XOLO ha terminado para esta misión.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Tomar screenshot de su código en MakeCode.</li>
+                            <li>Tomar screenshot de su conversación con XOLO.</li>
+                            <li>Subir ambas evidencias a Gnius Space.</li>
+                            <li>Dar click en "Finalizar Misión".</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 5: ¡Misión Cumplida!</h4>
+                    <div class="slide-content">
+                        <p><strong>📸 Para terminar, sube tus evidencias a Gnius Space:</strong></p>
+                        <ol>
+                            <li>Una captura de pantalla de tu programa final en <strong>MakeCode</strong>.</li>
+                            <li>Una captura de pantalla de tu conversación con <strong>XOLO</strong> donde te dio tu GCS.</li>
+                        </ol>
+                        <p class="highlight-text" style="margin-top: 1rem;">¡No olvides dar click en el botón <strong>"Finalizar Misión"</strong> cuando termines!</p>
                     </div>
                 </div>
             </div>
         </main>
     </div>
-
     <script src="script.js"></script>
 </body>
-</html>
+</html></html>
